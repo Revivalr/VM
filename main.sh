@@ -20,7 +20,7 @@ echo 'Which browser to install?
 (1) palemoon(good compromise)
 (2) firefox(slow)
 (3) all
-Type in the name of the browser or the number riht next to it to select a browser to install.'
+Type in the name of the browser or the number right next to it to select a browser to install.'
 read browser
 if [ $browser == qutebrowser ] || [ $browser == 0 ]
 then
