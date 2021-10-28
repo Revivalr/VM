@@ -25,14 +25,14 @@ read browser
 if [ $browser == qutebrowser ] || [ $browser == 0 ]
 then
   echo 'Installing qutebrowser'
-  sudo apt install qutebrowser
+  sudo apt -y install qutebrowser
 elif [ $browser == 'palemoon'] || [ $browser == 1 ]
 then
   echo 'Installing palemoon'
   echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/home:stevenpusser.list
   curl -fsSL https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_18.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_stevenpusser.gpg > /dev/null
-  sudo apt update
-  sudo apt install palemoon
+  sudo apt -y update
+  sudo apt -y install palemoon
 elif [ $browser == firefox ] || [ $browser == 2 ]
 then
   echo 'Installing firefox'
@@ -40,21 +40,21 @@ then
 elif [ $browser == all ] || [ $browser == 3 ]
 then
   echo 'Installing qutebrowser'
-  sudo apt install qutebrowser
+  sudo apt -y install qutebrowser
   echo 'Installing palemoon'
   echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/home:stevenpusser.list
   curl -fsSL https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_18.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_stevenpusser.gpg > /dev/null
   sudo apt -y update
-  sudo apt install palemoon
+  sudo apt -y install palemoon
   echo 'Installing firefox'
-  sudo apt install firefox
+  sudo apt -y install firefox
 else
   echo 'Fuck you! Click control+c to end the script and then run again.'
 fi
 
-sudo apt install neofetch
+sudo apt -y install neofetch
 neofetch
-sudo apt remove neofetch
+sudo apt -y remove neofetch
 touch startup.sh
 
 echo '
