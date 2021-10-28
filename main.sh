@@ -66,7 +66,7 @@ echo 'Would you like to read the rest of the documentation. 'Yes' or 'No''
 read docs
 if [ $docs == yes ]
 then
-  sudo apt-get install w3m w3m-img
+  sudo apt -y install w3m w3m-img
   w3m https://en.wikipedia.org/wiki/Thomas_Jefferson
 else
   exit
